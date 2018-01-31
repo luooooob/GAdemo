@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Image evolution</title>
+    <meta charset="utf-8">
+    <script src="./geneticAlgorithm.js"></script>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .image {
+        margin: 20px;
+      }
+      .image canvas{
+        width:200px;
+        height:200px;
+      }
+      .control {
+        width: 200px;
+      }
+      #start, #stop {
+        height: 37px;
+        width: 100px;
+        margin: 10px;
+        color: antiquewhite;
+        background-color: #777;
+        text-align: center;
+        line-height: 40px;
+      }
+      #stop {
+        display: none;
+      }
+      #fitness, #time {
+        margin: 10px;
+        color: #777;
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image">
+      原始图像<br>
+      <canvas id="canvas_input" ></canvas>
+    </div>
+    <div class="image">
+      最佳<br>
+      <canvas id="canvas_best" ></canvas>
+    </div>
+
+    <div class="image">
+      当前<br>
+      <canvas id="canvas_test"></canvas>
+    </div>
+    <div class="control">
+      <div id="start" >开始</div>
+      <div id="stop">暂停</div>
+      <span id="fitness">?</span> 适应度<br>
+      <span id="time">0</span>用时<br>
+      </div>
+    </div>
+  </body>
+</html>
